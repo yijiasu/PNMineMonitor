@@ -1,0 +1,19 @@
+{
+  "name": "pnminemonitor",
+  "version": "1.0.0",
+  "description": "This repo is for developing a monitoring utility in PNMine ETH mining farm.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yijiasu/PNMineMonitor.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yijiasu/PNMineMonitor/issues"
+  },
+  "homepage": "https://github.com/yijiasu/PNMineMonitor#readme"
+}
