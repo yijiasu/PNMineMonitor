@@ -46,6 +46,14 @@ elif grep -q "gpu crashed" /var/run/ethos/status.file; then
     sleep 5
     /opt/ethos/bin/minestart
   fi
+elif grep -q "possible miner stall" /var/run/ethos/status.file; then
+  echo "$(date) GPU miner stall detected, rebooting..." | tee -a ${LOG_FILE}
+  if [ ${DRY_RUN} = false ]; then
+    rm -f /var/run/ethos/crashed_gpus.file
+    /opt/ethos/bin/minestop
+    sleep 5
+    /opt/ethos/bin/minestart
+  fi
 else
   echo "Everything's fine, exiting..."
 fi
